@@ -1,1 +1,0 @@
--- Esquema general de la BD 
