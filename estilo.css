@@ -1,0 +1,187 @@
+/* ======== RESETEO GENERAL ======== */
+* {
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina rellenos por defecto */
+    box-sizing: border-box; /* Incluye borde y padding en el cálculo del tamaño */
+    font-family: Arial, sans-serif; /* Fuente general */
+}
+
+body {
+    display: flex; /* Permite colocar sidebar y contenido en línea */
+    background: #f5f5f5; /* Fondo gris claro similar a Blackboard */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+/* ======== SIDEBAR ======== */
+.sidebar {
+    width: 200px; /* Ancho fijo como Blackboard */
+    background: #252525; /* Fondo negro */
+    color: white; /* Texto blanco */
+    display: flex;
+    flex-direction: column; /* Elementos en columna */
+    justify-content: space-between; /* Logo arriba, enlaces abajo */
+}
+
+.logo {
+    font-size: 29px; /* Tamaño del texto del logo */
+    font-weight: bold; /* Texto en negrita */
+    padding: 20px; /* Espaciado interno */
+    border-bottom: 1px solid #333; /* Línea inferior separadora */
+}
+
+.logo span {
+    color: #e95917; /* Punto del logo en naranja */
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de lista */
+}
+
+nav ul li {
+    display: flex; /* Alinea icono y texto */
+    align-items: center; /* Centra verticalmente */
+    gap: 15px; /* Separación entre icono y texto */
+    padding: 12px 16px; /* Espaciado interno */
+    cursor: pointer; /* Cambia cursor al pasar por encima */
+    font-size: 15px; /* Tamaño del texto */
+}
+
+nav ul li:hover {
+    background: #161616; /* Fondo rojo al pasar el mouse */
+}
+
+nav ul li.active {
+    background: #1613f0; /* Fondo azul si está activo */
+}
+
+nav ul li i {
+    width: 25px; /* Ancho fijo para iconos */
+    height: 25px; /* Alto fijo para iconos */
+    text-align: center; /* Centra iconos horizontalmente */
+    line-height: 20px; /* Centra iconos verticalmente si son fuentes */
+    font-size: 20px; /* Tamaño del icono */
+    display: inline-block; /* Asegura que width y height se apliquen */
+}
+
+.footer-links {
+    padding: 150px 20px; /* Espaciado interno */
+    font-size: 12px; /* Texto más pequeño */
+}
+
+.footer-links a {
+    display: block; /* Ocupa ancho completo */
+    color: #aaa; /* Gris claro */
+    text-decoration: none; /* Quita subrayado */
+    margin-bottom: 5px; /* Espaciado inferior */
+}
+
+.footer-links a:hover {
+    color: white; /* Cambia a blanco al pasar el mouse */
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+.content {
+    flex: 1; /* Ocupa todo el espacio restante */
+    display: flex;
+    flex-direction: column;
+    padding: 35px 40px; /* Espaciado interno amplio */
+    overflow-y: auto; /* Scroll vertical si el contenido es largo */
+}
+
+/* ======== CABECERA ======== */
+header {
+    display: flex;
+    flex-direction: column; /* Título y filtros en columna */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+header h1 {
+    margin-bottom: 70px; /* Separación con los filtros */
+    font-size: 30px; /* Tamaño grande para el título */
+    font-weight: 500; /* Negrita moderada */
+}
+
+.filters {
+    display: flex; /* Coloca filtros en línea */
+    gap: 20px; /* Separación entre filtros */
+    align-items: center; /* Centra verticalmente */
+    font-size: 14px; /* Tamaño del texto */
+}
+
+.filters input {
+    padding: 10px 250px;   /* Primer rectángulo: pequeño */
+    border: 1px solid #555252;
+    outline: none;
+    font-size: 14px;
+    width: 120px;
+}
+
+.filters select:first-of-type {
+    padding: 10px 200px;   /* Segundo rectángulo: mediano */
+    border: 1px solid #555252;
+    outline: none;
+    font-size: 14px;
+    width: 180px;
+}
+
+.filters select:nth-of-type(2) {
+    padding: 10px 200px;  /* Tercer rectángulo: grande */
+    border: 1px solid #555252;
+    outline: none;
+    font-size: 14px;
+    width: 240px;
+}
+
+.filters button {
+    padding: 10px 100px;   /* Cuarto rectángulo: más pequeño */
+    border: 1px solid #555252;
+    outline: none;
+    font-size: 14px;
+    background: #252525;
+    color: white;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.filters select {
+    background: white; /* Fondo blanco en select */
+}
+
+/* ======== LISTADO DE CURSOS ======== */
+.courses h2 {
+    margin-bottom: 15px; /* Separación con las tarjetas */
+    font-size: 16px;
+    color: #555; /* Gris medio */
+    font-weight: 500;
+}
+
+.course-card {
+    background: white; /* Fondo blanco para las tarjetas */
+    padding: 15px 20px; /* Espaciado interno */
+    margin-bottom: 10px; /* Separación entre tarjetas */
+    border-left: 6px solid; /* Borde de color identificativo */
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.course-card .course-code {
+    font-size: 12px;
+    color: gray; /* Código del curso en gris */
+}
+
+.course-card .course-title {
+    font-weight: bold;
+    margin: 5px 0; /* Separación arriba y abajo */
+    font-size: 15px;
+}
+
+.course-card .course-info {
+    font-size: 12px;
+    color: gray; /* Texto auxiliar en gris */
+}
+
+/* ======== COLORES DE TARJETAS ======== */
+.yellow { border-color: #f6c026; } /* Amarillo */
+.purple { border-color: #9c27b0; } /* Morado */
+.cyan   { border-color: #26c6da; } /* Celeste */
+.orange { border-color: #fb8c00; } /* Naranja */
+.red    { border-color: #e53935; } /* Rojo */

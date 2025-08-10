@@ -99,3 +99,8 @@ button {
 .terms a {
     color: white;
 }
+
+/* Corrección para el icono de Facebook */
+.social-icons img.facebook {
+    filter: none;
+}
