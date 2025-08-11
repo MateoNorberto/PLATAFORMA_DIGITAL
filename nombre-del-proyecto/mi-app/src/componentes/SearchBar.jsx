@@ -71,23 +71,23 @@ const FilterBar = () => {
 // Estilos para reutilizar
 const iconButtonStyle = {
   backgroundColor: '#eee',
-  border: '1px solid #ccc',
-  borderRadius: '4px',
+  border: '0px solid #ccc',
+  borderRadius: '0px',
   padding: '6px 10px',
   cursor: 'pointer',
   fontSize: '14px',
-  color: '#555',
+  color: '#080808ff',
 };
 
 const searchBarStyle = {
   display: 'flex',
   alignItems: 'center',
   backgroundColor: '#fff',
-  border: '1px solid #ccc',
-  borderRadius: '4px',
+  border: '1px solid #6d6a6aff',
+  borderRadius: '2px',
   padding: '0.5rem 0.75rem',
   height: '40px',
-  minWidth: '350px',
+  minWidth: '520px',
   boxSizing: 'border-box',
 };
 
@@ -108,18 +108,18 @@ const dropdownContainerStyle = {
 };
 
 const labelStyle = {
-  marginBottom: '2px',
+  marginBottom: '0px',
   fontWeight: '500',
 };
 
 const selectStyle = {
-  padding: '6px 10px',
+  padding: '6px 1 0px',
   borderRadius: '4px',
   border: '1px solid #ccc',
   fontSize: '14px',
   backgroundColor: '#fff',
   cursor: 'pointer',
-  minWidth: '160px',
+  minWidth: '390px',
 };
 
 const smallSelectStyle = {
