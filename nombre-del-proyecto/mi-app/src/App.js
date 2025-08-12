@@ -2,6 +2,7 @@ import Sidebar from './componentes/Sidebar';
 import Header from './componentes/Header';
 import SearchBar from './componentes/SearchBar';
 import Filters from './componentes/Filters';
+import CoursesSection from './componentes/CoursesSection'; // Nuevo import
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <main style={{ padding: '1rem', flex: 1 }}>
           <SearchBar />
           <Filters />
+          <CoursesSection /> {/* Nuevo componente agregado */}
         </main>
       </div>
     </div>
