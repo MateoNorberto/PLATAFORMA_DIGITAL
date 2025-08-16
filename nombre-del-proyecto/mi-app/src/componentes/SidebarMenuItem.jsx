@@ -1,10 +1,10 @@
-
+import React from 'react';
 
 const SidebarMenuItem = ({ icon, label, active, onClick }) => {
   const baseStyle = {
     display: 'flex',
     alignItems: 'center',
-    padding: '0.7rem 0.1rem',
+    padding: '0.7rem 0.6rem',
     marginBottom: '0.3rem',
     backgroundColor: active ? '#0066ff' : 'transparent',
     color: active ? '#fff' : '#ccc',
@@ -18,22 +18,22 @@ const SidebarMenuItem = ({ icon, label, active, onClick }) => {
     transform: 'translateX(0)',
   };
 
-  const handleMouseEnter = (e) => {
-    e.currentTarget.style.transform = 'translateX(5px)';
-    e.currentTarget.style.backgroundColor = '#333';
+  const hoverStyle = {
+    backgroundColor: active ? '#0066ff' : '#333',
+    transform: 'translateX(5px)',
   };
 
-  const handleMouseLeave = (e) => {
-    e.currentTarget.style.transform = 'translateX(0)';
-    e.currentTarget.style.backgroundColor = active ? '#0066ff' : 'transparent';
-  };
+  const [hovered, setHovered] = React.useState(false);
 
   return (
     <div
-      style={baseStyle}
+      style={{
+        ...baseStyle,
+        ...(hovered ? hoverStyle : {}),
+      }}
       onClick={onClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
       title={label}
     >
       <span style={{ marginRight: '1rem', fontSize: '1.2rem' }}>{icon}</span>

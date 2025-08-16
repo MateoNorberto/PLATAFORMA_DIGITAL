@@ -1,24 +1,63 @@
 import React from 'react';
-import SidebarLogo from './SidebarLogo'; // ← IMPORTAS el logo personalizado
-import SidebarMenuItem from './SidebarMenuItem'; // ← Para usar los ítems del menú
-import { FaUniversity, FaUser, FaGlobe, FaBook, FaUsers, FaCalendarAlt, FaEnvelope, FaClipboardList, FaTools, FaSignOutAlt } from 'react-icons/fa';
+import SidebarLogo from './SidebarLogo';
+import SidebarMenuItem from './SidebarMenuItem';
+import {
+  FaUniversity, FaUser, FaGlobe, FaBook, FaUsers,
+  FaCalendarAlt, FaEnvelope, FaClipboardList, FaTools, FaSignOutAlt
+} from 'react-icons/fa';
 
-const Sidebar = () => {
+const Sidebar = ({ onSectionChange }) => {
   const items = [
     {
       icon: <FaUniversity />,
       label: 'Página de la institución',
       onClick: () => window.open('https://www.sanluisgonzaga.edu.pe', '_blank'),
     },
-    { icon: <FaUser />, label: 'ARIEL LEO NORBER...' },
-    { icon: <FaGlobe />, label: 'Actividad' },
-    { icon: <FaBook />, label: 'Cursos', active: true },
-    { icon: <FaUsers />, label: 'Organizaciones' },
-    { icon: <FaCalendarAlt />, label: 'Calendario' },
-    { icon: <FaEnvelope />, label: 'Mensajes' },
-    { icon: <FaClipboardList />, label: 'Calificaciones' },
-    { icon: <FaTools />, label: 'Herramientas' },
-    { icon: <FaSignOutAlt />, label: 'Cerrar sesión' },
+    {
+      icon: <FaUser />,
+      label: 'Perfil',
+      onClick: () => onSectionChange('Perfil'),
+    },
+    {
+      icon: <FaGlobe />,
+      label: 'Actividad',
+      onClick: () => onSectionChange('Actividad'),
+    },
+    {
+      icon: <FaBook />,
+      label: 'Cursos',
+      onClick: () => onSectionChange('Cursos'),
+    },
+    {
+      icon: <FaUsers />,
+      label: 'Organizaciones',
+      onClick: () => onSectionChange('Organizaciones'),
+    },
+    {
+      icon: <FaCalendarAlt />,
+      label: 'Calendario',
+      onClick: () => onSectionChange('Calendario'),
+    },
+    {
+      icon: <FaEnvelope />,
+      label: 'Mensajes',
+      onClick: () => onSectionChange('Mensajes'),
+    },
+    {
+      icon: <FaClipboardList />,
+      label: 'Calificaciones',
+      onClick: () => onSectionChange('Calificaciones'),
+    },
+    {
+      icon: <FaTools />,
+      label: 'Herramientas',
+      onClick: () => onSectionChange('Herramientas'),
+    },
+    {
+      icon: <FaSignOutAlt />,
+      label: 'Cerrar sesión',
+      onClick: () => alert('Sesión cerrada'),
+    },
   ];
 
   return (
@@ -33,22 +72,15 @@ const Sidebar = () => {
       boxSizing: 'border-box',
       fontFamily: 'Arial, sans-serif'
     }}>
-      
-      {/* Aquí usamos el componente SidebarLogo */}
       <SidebarLogo />
-
-      {/* Listamos los items del menú */}
       {items.map((item, index) => (
         <SidebarMenuItem
           key={index}
           icon={item.icon}
           label={item.label}
-          active={item.active}
           onClick={item.onClick}
         />
       ))}
-
-      {/* Pie de página del sidebar */}
       <div style={{ marginTop: 'auto', fontSize: '0.7rem', color: '#666', paddingTop: '1rem' }}>
         <div>Privacidad</div>
         <div>Condiciones</div>
