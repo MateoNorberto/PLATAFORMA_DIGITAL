@@ -6,7 +6,7 @@ import {
   FaCalendarAlt, FaEnvelope, FaClipboardList, FaTools, FaSignOutAlt
 } from 'react-icons/fa';
 
-const Sidebar = ({ onSectionChange }) => {
+const Sidebar = ({ onSectionChange, activeSection }) => {
   const items = [
     {
       icon: <FaUniversity />,
@@ -79,6 +79,7 @@ const Sidebar = ({ onSectionChange }) => {
           icon={item.icon}
           label={item.label}
           onClick={item.onClick}
+          active={item.label === activeSection}
         />
       ))}
       <div style={{ marginTop: 'auto', fontSize: '0.7rem', color: '#666', paddingTop: '1rem' }}>

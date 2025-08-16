@@ -4,17 +4,20 @@ import Header from './componentes/Header';
 import SearchBar from './componentes/SearchBar';
 import Filters from './componentes/Filters';
 import CoursesSection from './componentes/CoursesSection';
-
-// Importa otros componentes según los necesites
-// import Perfil from './componentes/Perfil';
-// import Actividad from './componentes/Actividad';
-// ...
+import Perfil from './pages/Perfil'; // Importamos los componentes de pages/
+import Actividad from './pages/Actividad';
+import Organizaciones from './pages/Organizaciones';
+import Calendario from './pages/Calendario';
+import Mensajes from './pages/Mensajes';
+import Calificaciones from './pages/Calificaciones';
+import Herramientas from './pages/Herramientas';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('Cursos'); // valor por defecto
+  const [activeSection, setActiveSection] = useState('Cursos');
 
   // Función para renderizar contenido dinámico
   const renderMainContent = () => {
+    console.log('Sección activa:', activeSection); // Depuración
     switch (activeSection) {
       case 'Cursos':
         return (
@@ -25,19 +28,19 @@ function App() {
           </>
         );
       case 'Perfil':
-        return <div>Contenido del Perfil</div>;
+        return <Perfil />;
       case 'Actividad':
-        return <div>Contenido de la Actividad</div>;
+        return <Actividad />;
       case 'Organizaciones':
-        return <div>Contenido de las Organizaciones</div>;
+        return <Organizaciones />;
       case 'Calendario':
-        return <div>Contenido del Calendario</div>;
+        return <Calendario />;
       case 'Mensajes':
-        return <div>Contenido de los Mensajes</div>;
+        return <Mensajes />;
       case 'Calificaciones':
-        return <div>Contenido de las Calificaciones</div>;
+        return <Calificaciones />;
       case 'Herramientas':
-        return <div>Contenido de las Herramientas</div>;
+        return <Herramientas />;
       default:
         return <div>Selecciona una sección</div>;
     }

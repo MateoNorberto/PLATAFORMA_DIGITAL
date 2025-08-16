@@ -31,7 +31,10 @@ const SidebarMenuItem = ({ icon, label, active, onClick }) => {
         ...baseStyle,
         ...(hovered ? hoverStyle : {}),
       }}
-      onClick={onClick}
+      onClick={() => {
+        console.log(`Clic en: ${label}`); // Depuración
+        onClick();
+      }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       title={label}
