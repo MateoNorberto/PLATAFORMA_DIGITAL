@@ -28,8 +28,8 @@ const Perfil = () => {
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
-        <h2 style={{ fontWeight: "normal", marginBottom: 5 }}>ARIEL LEO NORBERTO MONTALVO</h2>
-        <p style={{ fontWeight: "bold", margin: 0 }}>1428824@senati.pe</p>
+        <h2 style={{ fontWeight: "normal", marginBottom: 5 }}>name student</h2>
+        <p style={{ fontWeight: "bold", margin: 0 }}>@gmail.com</p>
       </div>
 
       {/* Main Content: Two Columns */}
@@ -44,16 +44,16 @@ const Perfil = () => {
                 <tr>
                   <td style={{ fontWeight: "bold", padding: "10px 5px", borderBottom: "1px solid #ddd" }}>Nombre completo</td>
                   <td style={{ padding: "10px 5px", borderBottom: "1px solid #ddd", textAlign: "right", color: "#1a73e8", cursor: "pointer" }}>
-                    ARIEL LEO NORBERTO MONTALVO
+                    name
                   </td>
                 </tr>
                 <tr>
                   <td style={{ fontWeight: "bold", padding: "10px 5px", borderBottom: "1px solid #ddd" }}>Dirección de correo electrónico</td>
-                  <td style={{ padding: "10px 5px", borderBottom: "1px solid #ddd", textAlign: "right" }}>1428824@senati.pe</td>
+                  <td style={{ padding: "10px 5px", borderBottom: "1px solid #ddd", textAlign: "right" }}>@gmail.com</td>
                 </tr>
                 <tr>
                   <td style={{ fontWeight: "bold", padding: "10px 5px", borderBottom: "1px solid #ddd" }}>ID de estudiante</td>
-                  <td style={{ padding: "10px 5px", borderBottom: "1px solid #ddd", textAlign: "right" }}>001428824</td>
+                  <td style={{ padding: "10px 5px", borderBottom: "1px solid #ddd", textAlign: "right" }}>0000000000</td>
                 </tr>
                 <tr>
                   <td style={{ fontWeight: "bold", padding: "10px 5px" }}>Contraseña</td>

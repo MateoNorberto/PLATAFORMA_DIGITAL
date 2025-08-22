@@ -2,13 +2,13 @@ import React from 'react';
 import CourseCard from './CourseCard';
 
 const coursesData = [
-  { id: 1, code: '202520-PIAD-625-TEC-NRC_13229', title: 'BIG DATA Y ANÁLISIS DE DATOS', status: 'Abierto', teacher: 'RONAL NOEL VILCA APOLIN', color: '#FFD54F' },
-  { id: 2, code: '202520-CNIU-126-ACT-NRC_28271', title: 'ELABORACIÓN DE PROYECTO DE INNOVACIÓN Y/O MEJORA', status: 'Abierto', teacher: 'RONAL NOEL VILCA APOLIN', color: '#BA68C8' },
-  { id: 3, code: '202520-CGEU-241-TEC-NRC_13827', title: 'Mejora de Método en el trabajo', status: 'Abierto', teacher: 'CHARLEN MAXIMO CALERO HUAMAN', color: '#4DD0E1' },
-  { id: 4, code: '202520-CNIU-108-ACT-NRC_25914', title: 'REV Y CALIF CUADERNOS INFORME', status: 'Abierto', teacher: 'RONAL NOEL VILCA APOLIN', color: '#FF7043' },
-  { id: 5, code: '202520-PIAD-629-TAL-NRC_13825', title: 'SEMINARIO DE COMPLEMENTACIÓN PRÁCTICA III', status: 'Abierto', teacher: 'RONAL NOEL VILCA APOLIN', color: '#4DD0E1' },
-  { id: 6, code: '202520-PIAD-626-TEC-NRC_13230', title: 'TECNOLOGÍA CLOUD CON AWS', status: 'Abierto', teacher: 'RONAL NOEL VILCA APOLIN', color: '#42A5F5' },
-  { id: 7, section: 'Otros', code: 'PREVENCION-202520-25', title: 'CURSO OBLIGATORIO: Comportamiento seguro - Prevención de accidentes y Seguro de accidentes', status: 'Abierto', teacher: 'Comience ahora', color: '#000000' }
+  { id: 1, code: '202520-PIAD-625-TEC-NRC_13229', title: '#', status: 'Abierto', teacher: '#', color: '#FFD54F' },
+  { id: 2, code: '202520-CNIU-126-ACT-NRC_28271', title: '#', status: 'Abierto', teacher: '#', color: '#BA68C8' },
+  { id: 3, code: '202520-CGEU-241-TEC-NRC_13827', title: '#', status: 'Abierto', teacher: '#', color: '#4DD0E1' },
+  { id: 4, code: '202520-CNIU-108-ACT-NRC_25914', title: '#', status: 'Abierto', teacher: '#', color: '#FF7043' },
+  { id: 5, code: '202520-PIAD-629-TAL-NRC_13825', title: '#', status: 'Abierto', teacher: '#', color: '#4DD0E1' },
+  { id: 6, code: '202520-PIAD-626-TEC-NRC_13230', title: '#', status: 'Abierto', teacher: '#', color: '#42A5F5' },
+  { id: 7, section: 'Otros', code: '#', title: '#', status: 'Abierto', teacher: 'Comience ahora', color: '#000000' }
 ];
 
 const CoursesSection = () => {

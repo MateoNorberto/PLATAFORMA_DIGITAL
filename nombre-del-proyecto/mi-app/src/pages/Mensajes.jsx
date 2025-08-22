@@ -3,42 +3,42 @@ import React from 'react';
 const mensajes = [
   {
     id: '202520-PIAD-629-TAL-NRC_13825',
-    titulo: 'SEMINARIO DE COMPLEMENTACIÓN PRÁCTICA III',
+    titulo: '#',
     color: '#7DE0F3',
   },
   {
     id: '202520-PIAD-626-TEC-NRC_13230',
-    titulo: 'TECNOLOGÍA CLOUD CON AWS',
+    titulo: '#',
     color: '#007BFF',
   },
   {
     id: 'IND_ALUMNOS-202510-25',
-    titulo: 'Inducción para estudiantes',
+    titulo: '#',
     color: '#7DE0F3',
   },
   {
     id: '202520-PIAD-625-TEC-NRC_13229',
-    titulo: 'BIG DATA Y ANÁLISIS DE DATOS',
+    titulo: '#',
     color: '#FFD700',
   },
   {
     id: '202520-CNIU-108-ACT-NRC_25914',
-    titulo: 'REV Y CALIF CUADERNOS INFORME',
+    titulo: '#',
     color: '#FF6600',
   },
   {
     id: '202520-CGEU-241-TEC-NRC_13827',
-    titulo: 'Mejora de Método en el trabajo',
+    titulo: '#',
     color: '#6FD1C1',
   },
   {
     id: 'PREVENCION-202510-25',
-    titulo: 'Inducción a la Seguridad y Prevención de Accidentes para estudiantes de SENATI',
+    titulo: '#',
     color: '#9B59B6',
   },
   {
     id: '202520-CNIU-126-ACT-NRC_28271',
-    titulo: 'ELABORACIÓN DE PROYECTO DE INNOVACIÓN Y/O MEJORA',
+    titulo: '#',
     color: '#9B59B6',
   },
 ];

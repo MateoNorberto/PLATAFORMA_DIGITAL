@@ -5,34 +5,34 @@ const meses = ["ene.", "feb.", "mar.", "abr.", "may.", "jun.", "jul.", "ago.", "
 
 const eventosEjemplo = {
   "2025-08-16": [
-    { id: 1, tipo: "Entregable", codigo: "E01", descripcion: "BIG DATA", entrega: "23:59 (UTC-5)", curso: "202520-PIAD-625-TEC-NRC_13229", color: "#f0c808" },
-    { id: 2, tipo: "Evaluación Parcial", codigo: "T01", descripcion: "TECNOLOGÍAS", entrega: "23:59 (UTC-5)", curso: "202520-PIAD-626-TEC-NRC_13230", color: "#0078d4" },
-    { id: 3, tipo: "Informe de Práctica", codigo: "IP01", descripcion: "SEMINARIO", entrega: "23:59 (UTC-5)", curso: "202520-PIAD-629-TAL-NRC_13825", color: "#31c7ff" },
+    { id: 1, tipo: "EXAMEN", codigo: "E01", descripcion: "MATEMATICA", entrega: "23:59 (UTC-5)", curso: "202520-PIAD-625-TEC-NRC_13229", color: "#f0c808" },
+    { id: 2, tipo: "Evaluación Parcial", codigo: "T01", descripcion: "COMUNICACION", entrega: "23:59 (UTC-5)", curso: "202520-PIAD-626-TEC-NRC_13230", color: "#0078d4" },
+    { id: 3, tipo: "Informe de Práctica", codigo: "IP01", descripcion: "PERSONAL SOCIAL", entrega: "23:59 (UTC-5)", curso: "202520-PIAD-629-TAL-NRC_13825", color: "#31c7ff" },
   ],
 };
 
 const tasks = [
   {
     id: 1,
-    title: 'Entregable - E01',
+    title: 'EXAMEN',
     dueDate: '16/8/25 23:59 (UTC-5)',
-    link: '202520-PIAD-625-TEC-NRC_13229: BIG DATA Y ANÁLISIS DE DATOS',
+    link: '202520-PIAD-625-TEC-NRC_13229: MATEMATICA',
     borderColor: '#f5c518', // amarillo
     dueDay: 'Hoy - 16 de agosto de 2025',
   },
   {
     id: 2,
-    title: 'Informe de Práctica IP01',
+    title: 'PARTICIPACION',
     dueDate: '16/8/25 23:59 (UTC-5)',
-    link: '202520-PIAD-629-TAL-NRC_13825: SEMINARIO DE COMPLEMENTACIÓN PRÁCTICA III',
+    link: '202520-PIAD-629-TAL-NRC_13825: COMUNICACION',
     borderColor: '#6fd1ff', // celeste
     dueDay: 'Hoy - 16 de agosto de 2025',
   },
   {
     id: 3,
-    title: 'Evaluación Parcial T01',
+    title: 'COMPORTAMIENTO',
     dueDate: '16/8/25 23:59 (UTC-5)',
-    link: '202520-PIAD-626-TEC-NRC_13230: TECNOLOGÍA CLOUD CON AWS',
+    link: '202520-PIAD-626-TEC-NRC_13230: PERSONAL SOCIAL',
     borderColor: '#347dff', // azul
     dueDay: 'Hoy - 16 de agosto de 2025',
   },
@@ -46,7 +46,7 @@ const tasks = [
   },
   {
     id: 5,
-    title: 'Entrega de Informe de Práctica 01',
+    title: 'Entrega de Informe ',
     dueDate: '23/8/25 23:59 (UTC-5)',
     link: '202520-CNIU-108-ACT-NRC_25914: REV Y CALIF CUADERNOS INFORME',
     borderColor: '#ff7c00', // naranja
