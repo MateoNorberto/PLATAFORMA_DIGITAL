@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = 3000;
-const MONGO_URI = 'mongodb+srv://liamleonorberto:0kGuV70E9Yw4M793@proyect1.dutz7ps.mongodb.net/?retryWrites=true&w=majority&appName=proyect1';
+const MONGO_URI = 'mongodb+srv://liamleonorberto:OuOd6YjZrRGeKcyM@proyect1.dutz7ps.mongodb.net/?retryWrites=true&w=majority&appName=proyect1';
 
 // ======= CONEXIÓN A MONGODB =========
 mongoose.connect(MONGO_URI)

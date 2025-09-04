@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const styles = {
   body: {
@@ -93,11 +93,51 @@ const styles = {
   },
 };
 
-const Login = () => {
+const Login = ({ onLogin }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    setLoading(true);
+
+    try {
+      const response = await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, contraseña: password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Error en el login');
+      }
+
+      console.log(data);
+      alert(data.mensaje); // Opcional
+
+      // Guardar rol en localStorage para persistencia (opcional, pero útil para recargas)
+      localStorage.setItem('userRole', data.rol);
+
+      // Llamar a onLogin con el rol
+      onLogin(data.rol);
+
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div style={styles.body}>
       <div style={styles.container}>
-        {/* Lado izquierdo */}
         <div style={styles.left}>
           <h1 style={styles.leftH1}>Bienvenido{'\n'}de nuevo</h1>
           <p style={styles.leftP}>
@@ -110,11 +150,9 @@ const Login = () => {
             <a href="#"><img style={styles.socialImg} src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt="YouTube" /></a>
           </div>
         </div>
-
-        {/* Lado derecho */}
         <div style={styles.right}>
           <h2 style={styles.rightH2}>Iniciar sesión</h2>
-          <form style={styles.form}>
+          <form style={styles.form} onSubmit={handleSubmit}>
             <label style={styles.label} htmlFor="email">Correo electrónico</label>
             <input
               type="email"
@@ -122,8 +160,9 @@ const Login = () => {
               placeholder="Ingresa tu correo"
               required
               style={styles.input}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-
             <label style={styles.label} htmlFor="password">Contraseña</label>
             <input
               type="password"
@@ -131,16 +170,19 @@ const Login = () => {
               placeholder="Ingresa tu contraseña"
               required
               style={styles.input}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
-
             <div style={styles.remember}>
               <input type="checkbox" id="remember" />
               <label htmlFor="remember" style={styles.rememberLabel}>Recordarme</label>
             </div>
-
-            <button type="submit" style={styles.button}>Iniciar sesión ahora</button>
+            <button type="submit" style={styles.button} disabled={loading}>
+              {loading ? 'Cargando...' : 'Iniciar sesión ahora'}
+            </button>
             <a href="#" style={styles.lost}>¿Olvidaste tu contraseña?</a>
           </form>
+          {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
           <p style={styles.terms}>
             Al hacer clic en "Iniciar sesión ahora" aceptas<br />
             <a href="#" style={styles.termsLink}>Términos de servicio</a> | <a href="#" style={styles.termsLink}>Política de privacidad</a>
